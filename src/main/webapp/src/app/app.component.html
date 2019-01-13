@@ -1,15 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <ul>
-    <li>
-      <h2> <a routerLink="/details/6">views</a></h2>
-    </li>
-    <li>
-      <h2> <a routerLink="/create">create</a></h2>
-    </li>
-    <li>
-      <h2> <a routerLink="/list">list</a></h2>
-    </li>
-  </ul>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="mat-app-background basic-container">
+  <mat-sidenav-container class="container">
+    <mat-sidenav mode="side" opened>
+      <mat-accordion>
+
+        <mat-expansion-panel class="mat-menu-item-highlighted">
+          <mat-expansion-panel-header>
+            Actions
+          </mat-expansion-panel-header>
+          <mat-action-list>
+            <button class="small" mat-list-item routerLink="/create">Create truck</button>
+            <mat-divider></mat-divider>
+
+            <button class="small" mat-list-item routerLink="/list">Show all trucks</button>
+          </mat-action-list>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
 </div>
-<router-outlet></router-outlet>

@@ -1,5 +1,22 @@
-<form [formGroup]="truckForm" (ngSubmit)="onFormSubmit(truckForm.value)">
-    <input placeholder="Truck name" formControlName="name">
-    <input placeholder="Truck description" formControlName="description">
-    <button type="submit">save</button>
-</form>
+<div class="mat-elevation-z8">
+  <mat-card>
+    <form [formGroup]="truckForm" (ngSubmit)="onFormSubmit(truckForm.value)">
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Truck name" formControlName="name">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Truck description" formControlName="description">
+        </mat-form-field>
+
+      </div>
+      <div class="button-row">
+        <button type="submit" mat-flat-button color="primary">
+          <mat-icon>save</mat-icon>
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>
