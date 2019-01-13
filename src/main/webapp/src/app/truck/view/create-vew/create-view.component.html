@@ -1,0 +1,5 @@
+<form [formGroup]="truckForm" (ngSubmit)="onFormSubmit(truckForm.value)">
+    <input placeholder="Truck name" formControlName="name">
+    <input placeholder="Truck description" formControlName="description">
+    <button type="submit">save</button>
+</form>
