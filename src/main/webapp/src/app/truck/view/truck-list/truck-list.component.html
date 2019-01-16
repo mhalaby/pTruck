@@ -1,0 +1,20 @@
+<p>
+  truck-list!
+</p>
+
+<ul>
+  <li *ngFor="let truck of data; let i = index">
+    <div>
+      <span>
+        id: {{truck.id}}
+      </span>
+      <span>
+        name: {{truck.name}}
+      </span>
+      <span>
+        desription: {{truck.desription}}
+      </span>
+      <button routerLink="/details/{{truck.id}}">details</button>
+    </div>
+  </li>
+</ul>
